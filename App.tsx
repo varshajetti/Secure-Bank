@@ -6,6 +6,8 @@ import { User, Transaction, ChatMessage } from './types';
 import { categorizeTransaction, startChatSession } from './lib/gemini';
 import type { Chat } from '@google/genai';
 
+console.log("Gemini Key from VITE:", import.meta.env.VITE_GEMINI_API_KEY);
+
 const MOCK_USER: User = {
   name: 'Demo User',
   accountNumber: '1234-5678-9012',
