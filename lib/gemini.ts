@@ -1,8 +1,13 @@
 import { GoogleGenAI, Chat } from "@google/genai";
 import { Transaction, GeminiRiskResponse, GeminiCategoryResponse, GeminiFinancialTipResponse, User } from '../types';
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
 
+if (!apiKey) {
+  throw new Error("Gemini API key is missing. Set VITE_GEMINI_API_KEY in .env.");
+}
+
+const ai = new GoogleGenAI({ apiKey });
 const parseJsonResponse = <T>(text: string): T => {
     let jsonStr = text.trim();
     const fenceRegex = /^```(\w*)?\s*\n?(.*?)\n?\s*```$/s;
