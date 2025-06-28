@@ -32,7 +32,7 @@ const LoginPage = ({ onLogin }: LoginPageProps) => {
             <div className="w-full max-w-md">
                 <div className="text-center mb-8">
                     <h1 className="text-4xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600 tracking-tight">
-                        Gemini Secure Bank
+                        VVITU Secure Bank
                     </h1>
                     <p className="mt-3 text-lg text-slate-300">
                         Sign in to access your account.
