@@ -13,7 +13,7 @@ const Header = ({ user, onLogout }: HeaderProps) => {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div>
            <h1 className="text-xl sm:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-500 tracking-tight">
-             Gemini Secure Bank
+             VVITU Secure Bank
            </h1>
             <p className="text-sm text-slate-400">Welcome back, {user.name}</p>
         </div>
