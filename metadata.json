@@ -1,0 +1,5 @@
+{
+  "name": "VVITU SecureBank - Fraud Detection",
+  "description": "An extension of a modern banking application that uses the Gemini API to analyze and detect potentially fraudulent transactions from a user's recent activity.",
+  "requestFramePermissions": []
+}
