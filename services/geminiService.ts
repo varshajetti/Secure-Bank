@@ -2,11 +2,13 @@ import { GoogleGenAI, Chat } from "@google/genai";
 import { Transaction } from '../types';
 import { allTransactions } from '../data/transactions';
 
-if (!process.env.API_KEY) {
-    console.warn("API_KEY environment variable not set. Gemini API calls will fail.");
+const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+
+if (!apiKey) {
+    console.warn("VITE_GEMINI_API_KEY not set. Gemini API calls will fail.");
 }
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY! });
+const ai = new GoogleGenAI({ apiKey });
 
 export const createChat = (): Chat => {
   const systemInstruction = `You are an intelligent AI assistant for VVITU SecureBank named 'SecureBot'. 
