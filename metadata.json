@@ -1,6 +1,0 @@
-{
-  "name": " Secure Bank",
-  "description": "A demo banking application that uses the Gemini API for real-time fraud detection and a conversational AI assistant for account inquiries.",
-  "requestFramePermissions": [],
-  "prompt": ""
-}
