@@ -49,7 +49,7 @@ export const detectFraudulentTransactions = async (transactions: Transaction[]):
 
   try {
     const response = await ai.models.generateContent({
-      model: "gemini-1.5-pro"
+      model: "gemini-1.5-pro",
 
       contents: prompt,
       config: {
