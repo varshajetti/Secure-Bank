@@ -24,7 +24,8 @@ export const createChat = (): Chat => {
   `;
 
   const chat = ai.chats.create({
-    model: 'gemini-2.5-flash-preview-04-17',
+    model: "gemini-1.5-pro"
+
     config: {
         systemInstruction: systemInstruction,
     }
@@ -50,7 +51,8 @@ export const detectFraudulentTransactions = async (transactions: Transaction[]):
 
   try {
     const response = await ai.models.generateContent({
-      model: "gemini-2.5-flash-preview-04-17",
+      model: "gemini-1.5-pro"
+
       contents: prompt,
       config: {
         responseMimeType: "application/json",
