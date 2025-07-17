@@ -23,13 +23,11 @@ export const createChat = (): Chat => {
     ${JSON.stringify(allTransactions, null, 2)}
   `;
 
-  const chat = ai.chats.create({
-    model: "gemini-1.5-pro"
+ const chat = ai.chats.create({
+  model: "gemini-2.5-flash-preview-04-17",
+  systemInstruction: systemInstruction,
+});
 
-    config: {
-        systemInstruction: systemInstruction,
-    }
-  });
   return chat;
 };
 
