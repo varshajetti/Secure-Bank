@@ -112,7 +112,7 @@ export const FraudDetection: React.FC = () => {
                                 Analyzing...
                             </>
                         ) : (
-                            'Analyze with Gemini AI'
+                            'Analyze for fraud'
                         )}
                     </button>
                 </div>
