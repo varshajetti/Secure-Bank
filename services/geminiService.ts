@@ -3,6 +3,7 @@ import { Transaction } from '../types';
 import { allTransactions } from '../data/transactions';
 
 const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+console.log("Gemini API Key:", import.meta.env.VITE_GEMINI_API_KEY);
 
 if (!apiKey) {
     console.warn("VITE_GEMINI_API_KEY not set. Gemini API calls will fail.");
