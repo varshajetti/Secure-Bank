@@ -25,7 +25,9 @@ export const createChat = (): Chat => {
 
  const chat = ai.chats.create({
   model: "gemini-2.5-flash-preview-04-17",
-  systemInstruction: systemInstruction,
+  config: {
+    systemInstruction: systemInstruction
+  }
 });
 
   return chat;
@@ -49,13 +51,13 @@ export const detectFraudulentTransactions = async (transactions: Transaction[]):
 
   try {
     const response = await ai.models.generateContent({
-      model: "gemini-1.5-pro",
+  model: "gemini-1.5-pro",
+  contents: [{ role: "user", parts: [{ text: prompt }] }],
+  config: {
+    responseMimeType: "application/json",
+  },
+});
 
-      contents: prompt,
-      config: {
-        responseMimeType: "application/json",
-      },
-    });
 
     let jsonStr = response.text.trim();
     const fenceRegex = /^```(\w*)?\s*\n?(.*?)\n?\s*```$/s;
