@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import { Transaction, FraudStatus } from '../types';
-import { detectFraudulentTransactions } from '../services/geminiService';
+import { detectFraudulentTransactions } from '../services/fraudRulesService';
 
 const initialTransactions: Transaction[] = [
     // Normal Looking Transactions
